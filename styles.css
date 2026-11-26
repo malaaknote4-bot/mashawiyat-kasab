@@ -290,3 +290,46 @@ p, figure { margin: 0; }
 :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
 body { transition: background-color .3s, color .3s; }
+
+/* Full price menu: gold-titled panels like the printed board */
+#full-menu { border-top: 1px solid var(--line); }
+.offer {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px 28px; flex-wrap: wrap;
+  padding: 22px 28px; margin-bottom: 36px; border-radius: var(--radius);
+  background: var(--gold); color: var(--ink-on-gold); box-shadow: inset 0 1px 0 #fff6;
+}
+.offer-kicker { font-weight: 700; }
+.offer-title { font-family: var(--font-display); font-size: clamp(1.4rem, 3.6vw, 1.9rem); line-height: 1.4; }
+.offer-title span { font-family: var(--font-body); font-weight: 800; white-space: nowrap; }
+.offer-phone {
+  padding: 10px 24px; border-radius: 999px; background: var(--ink-on-gold); color: #f3d98c;
+  font-weight: 800; font-size: 1.15rem; letter-spacing: .04em;
+}
+.price-board { columns: 2 380px; column-gap: 24px; }
+.price-panel {
+  break-inside: avoid; margin-bottom: 24px;
+  padding: 0 22px 14px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line-gold);
+}
+.price-cat {
+  display: table; margin: -1px auto 10px; padding: 7px 26px; border-radius: 0 0 14px 14px;
+  background: var(--gold); color: var(--ink-on-gold);
+  font-family: var(--font-body); font-weight: 800; font-size: 1.1rem;
+}
+.price-head, .price-list li {
+  display: grid; grid-template-columns: 1fr 3.5rem 4.5rem; gap: 8px; align-items: baseline;
+}
+.price-head { color: var(--muted); font-size: .8rem; font-weight: 700; padding-block: 4px 6px; border-bottom: 1px solid var(--line); }
+.price-head span:not(:first-child), .price-list .pr, .price-list .cal { text-align: center; }
+.price-list { list-style: none; margin: 0; padding: 0; }
+.price-list li { padding-block: 8px; border-bottom: 1px dashed var(--line); font-variant-numeric: tabular-nums; }
+.price-list li:last-child { border-bottom: 0; }
+.price-list .item { font-weight: 500; min-width: 0; }
+.price-list .pr { color: var(--accent); font-weight: 800; font-size: 1.05rem; }
+.price-list .cal { color: var(--muted); font-size: .9rem; }
+@media (max-width: 420px) {
+  .price-panel { padding-inline: 14px; }
+  .price-head, .price-list li { grid-template-columns: 1fr 3rem 3.8rem; }
+  .offer { padding: 18px 20px; justify-content: center; text-align: center; }
+}
+.contact-item a { color: var(--muted); }
