@@ -1,3 +1,28 @@
+// افتح الموقع دائماً من الأعلى
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+(() => {
+  const toTop = () => {
+    if (location.hash) {
+      try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    }
+    window.scrollTo(0, 0);
+  };
+  toTop();
+  window.addEventListener('load', () => setTimeout(toTop, 0));
+  window.addEventListener('pageshow', (e) => { if (e.persisted) toTop(); });
+  // روابط القائمة: تنتقل للقسم بدون إضافة # إلى الرابط
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      const target = id ? document.getElementById(id) : null;
+      if (!target || a.classList.contains('js-order')) return;
+      e.preventDefault();
+      if (id === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+      else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+
 // سنة حقوق النشر في التذييل
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -204,7 +229,9 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
 
   // "اطلب الآن": يفتح السلة إذا فيها أصناف، وإلا ينتقل للمنيو
   document.querySelectorAll('.js-order').forEach((a) => a.addEventListener('click', (e) => {
-    if (count() > 0) { e.preventDefault(); openCart(); }
+    e.preventDefault();
+    if (count() > 0) openCart();
+    else document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
 
   const syncMode = () => {
