@@ -1,27 +1,21 @@
-# My Portfolio
+# مطعم بيت الأصالة
 
-A simple, responsive portfolio website built with plain HTML, CSS and JavaScript. No build tools needed.
+صفحة هبوط لمطعم عربي، مكتوبة بـ HTML و CSS و JavaScript فقط، وجاهزة للنشر على GitHub Pages.
 
-## Files
+## الملفات
 
-- `index.html`: the page content (your name, about text, projects, contact info)
-- `styles.css`: the design (colors are at the top under `:root`)
-- `script.js`: dark mode toggle, mobile menu, scroll animations
+- `index.html`: محتوى الصفحة (الاسم، الأطباق، الأسعار، العنوان، أوقات العمل، الهاتف)
+- `styles.css`: التصميم والألوان (الألوان في أعلى الملف داخل `:root`)
+- `script.js`: قائمة الجوال
+- `images/`: صور الأطباق
 
-## Making it yours
+## التعديل
 
-Open `index.html` and replace the placeholder text:
+- غيّر اسم المطعم «بيت الأصالة» في `index.html`
+- أضف روابط تطبيقات التوصيل بدل `href="#"`
+- اكتب العنوان الحقيقي ورقم الهاتف وأوقات العمل في قسم «تواصل معنا»
 
-1. **Your Name**: in the `<title>`, logo, hero, and footer
-2. **About**: write about yourself; add a photo by putting it in an `images/` folder and swapping the placeholder for `<img src="images/me.jpg" alt="Photo of me">`
-3. **Projects**: update the titles, descriptions, tags and links (`href="#"`)
-4. **Contact**: change `you@example.com` and your social media links
+## النشر على GitHub Pages
 
-To change the main color, edit `--accent` in `styles.css`.
-
-## Publishing with GitHub Pages
-
-1. The repository must be **public** (on a free GitHub account)
-2. Go to **Settings → Pages**
-3. Under **Source**, choose **Deploy from a branch**, pick your branch and `/ (root)`, then **Save**
-4. After a minute, your site will be live at the address shown on that page
+1. اجعل المستودع **عاماً** (Public)
+2. من **Settings ← Pages** اختر **Deploy from a branch** ثم الفرع `main` والمجلد `/ (root)` واضغط **Save**
