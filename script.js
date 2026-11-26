@@ -214,7 +214,38 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
   form.addEventListener('input', updateLink);
   form.addEventListener('change', syncMode);
   form.addEventListener('submit', (e) => e.preventDefault());
-  send.addEventListener('click', updateLink);
+  // التحقق من البيانات قبل الإرسال (الملاحظات اختيارية)
+  const nameIn = document.getElementById('cart-name');
+  const addrIn = document.getElementById('cart-address');
+  const warn = document.getElementById('cart-warn');
+  function validate(show) {
+    const isDelivery = document.getElementById('mode-delivery').checked;
+    const problems = [];
+    if (!nameIn.value.trim()) problems.push([nameIn, 'err-name']);
+    if (isDelivery && !addrIn.value.trim()) problems.push([addrIn, 'err-address']);
+    [[nameIn, 'err-name'], [addrIn, 'err-address']].forEach(([el, id]) => {
+      const bad = problems.some((p) => p[0] === el);
+      if (show || !bad) {
+        el.classList.toggle('invalid', bad);
+        document.getElementById(id).hidden = !bad;
+      }
+    });
+    if (show) warn.hidden = problems.length === 0;
+    else if (!problems.length) warn.hidden = true;
+    return problems;
+  }
+  form.addEventListener('input', () => validate(false));
+  form.addEventListener('change', () => validate(false));
+  send.addEventListener('click', (e) => {
+    const problems = validate(true);
+    if (problems.length) {
+      e.preventDefault();
+      problems[0][0].focus();
+      problems[0][0].scrollIntoView({ block: 'center', behavior: 'smooth' });
+      return;
+    }
+    updateLink();
+  });
 
   syncMode();
   render();

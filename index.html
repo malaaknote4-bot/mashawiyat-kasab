@@ -444,8 +444,9 @@
       <ul class="cart-items"></ul>
 
       <form class="cart-form" id="cart-form">
-        <label for="cart-name">الاسم</label>
-        <input id="cart-name" name="name" type="text" autocomplete="name" placeholder="اسمك">
+        <label for="cart-name">الاسم <span class="req">*</span></label>
+        <input id="cart-name" name="name" type="text" autocomplete="name" placeholder="اسمك" required>
+        <p class="field-error" id="err-name" hidden>الرجاء كتابة الاسم</p>
 
         <fieldset class="cart-mode">
           <legend>طريقة الاستلام</legend>
@@ -461,11 +462,12 @@
         </fieldset>
 
         <div class="cart-address">
-          <label for="cart-address">العنوان</label>
+          <label for="cart-address">العنوان <span class="req">*</span></label>
           <textarea id="cart-address" name="address" rows="2" placeholder="الحي، الشارع، رقم المنزل"></textarea>
+          <p class="field-error" id="err-address" hidden>الرجاء كتابة العنوان للتوصيل</p>
         </div>
 
-        <label for="cart-notes">ملاحظات</label>
+        <label for="cart-notes">ملاحظات <span class="opt">(اختياري)</span></label>
         <textarea id="cart-notes" name="notes" rows="2" placeholder="مثلاً: بدون بصل"></textarea>
       </form>
     </div>
@@ -473,6 +475,7 @@
     <footer class="cart-foot">
       <div class="cart-total"><span>الإجمالي</span><strong id="cart-total">0 ريال</strong></div>
       <a class="btn btn-wa-solid" id="cart-send" href="https://wa.me/966532211249" target="_blank" rel="noopener" aria-disabled="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M9 8.5c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.1.3 0 .5.6 1 1.4 1.8 2.4 2.4.2.1.4.1.5 0l.6-.6c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.5.8-.6.4-1.7.6-3.1-.1a9.6 9.6 0 0 1-4.3-4.3c-.7-1.4-.4-2.5-.1-3.1z"/></svg>أرسل الطلب عبر واتساب</a>
+      <p class="cart-warn" id="cart-warn" hidden>أكمل البيانات المطلوبة قبل إرسال الطلب</p>
       <p class="cart-hint">يفتح واتساب ورسالة الطلب جاهزة، فقط اضغط إرسال.</p>
     </footer>
   </aside>

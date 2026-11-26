@@ -710,3 +710,12 @@ body { transition: background-color .3s, color .3s; }
 }
 .cart-pay { flex-direction: column; gap: 8px; }
 .cart-pay label { font-family: var(--font-body); }
+
+/* Required fields */
+.req { color: #c0392b; }
+.opt { color: var(--muted); font-weight: 400; font-size: .85em; }
+.cart-form .invalid { border-color: #c0392b !important; box-shadow: 0 0 0 3px #c0392b26; }
+.field-error { color: #c0392b; font-size: .85rem; font-weight: 700; margin-top: -2px; }
+.cart-warn { color: #c0392b; font-weight: 700; font-size: .92rem; text-align: center; }
+:root[data-theme="dark"] .req, :root[data-theme="dark"] .field-error, :root[data-theme="dark"] .cart-warn { color: #ff8a7a; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .req, :root:not([data-theme="light"]) .field-error, :root:not([data-theme="light"]) .cart-warn { color: #ff8a7a; } }
