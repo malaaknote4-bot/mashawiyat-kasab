@@ -677,3 +677,14 @@ body { transition: background-color .3s, color .3s; }
             mask-image: radial-gradient(farthest-side at 50% 50%, #000 74%, transparent 100%);
   }
 }
+
+/* Phone: dish larger, tucked slightly behind the title (title stays on top and clear) */
+@media (max-width: 640px) {
+  .hero-dish { width: 150%; margin-inline-end: -12%; z-index: 0; }
+  .hero-text { position: relative; z-index: 2; }
+  .hero h1, .hero .lead, .hero .eyebrow { text-shadow: 0 0 14px var(--bg), 0 0 6px var(--bg); }
+}
+@media (max-width: 640px) {
+  .hero-dish { width: 140%; }
+  .hero .gold-text { text-shadow: none; filter: drop-shadow(0 0 5px var(--bg)) drop-shadow(0 0 2px var(--bg)); }
+}
