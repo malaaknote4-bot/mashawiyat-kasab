@@ -644,3 +644,17 @@ body { transition: background-color .3s, color .3s; }
   .nav-links, .nav-links.open { gap: 16px; }
   .nav-links a:not(.btn) { font-size: .92rem; }
 }
+
+/* ===== Phone: calmer hero, dish blends into the background ===== */
+@media (max-width: 640px) {
+  .hero-thumb, .hero-glow { display: none; }
+  .dish-frame { padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; }
+  .dish-frame img {
+    border-radius: 0; aspect-ratio: 1 / 1; object-fit: cover;
+    -webkit-mask-image: radial-gradient(closest-side, #000 52%, transparent 96%);
+            mask-image: radial-gradient(closest-side, #000 52%, transparent 96%);
+  }
+  .hero-dish { width: 165%; margin-inline-end: -70%; }
+  .hero::after { display: none; }
+  .nav-links li:has(.btn) { display: none; }
+}
