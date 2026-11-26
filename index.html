@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name: designer and developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%234f46e5'/><text x='50' y='66' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>YN</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#top" class="logo">Your Name</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1.5 12h3M19.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container" id="top">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Your Name.</h1>
+      <h2 class="hero-sub">I design and build things for the web.</h2>
+      <p class="hero-text">
+        A short sentence about who you are and what you do. For example: I'm a front-end developer
+        who loves turning ideas into clean, accessible, and fast websites.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container reveal" id="about">
+      <h2 class="section-title"><span>01.</span> About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Write a few sentences about yourself here: where you're from, how you got started,
+            and what you're passionate about.
+          </p>
+          <p>
+            Mention what you're doing now. Are you studying, working, or freelancing?
+            And what kind of opportunities are you looking for?
+          </p>
+          <p>When I'm not working, you'll find me reading, drawing, or exploring new places.</p>
+        </div>
+        <div class="about-photo">
+          <!-- Replace the div below with: <img src="images/me.jpg" alt="Photo of Your Name"> -->
+          <div class="photo-placeholder" aria-hidden="true">YN</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container reveal" id="projects">
+      <h2 class="section-title"><span>02.</span> Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-thumb" style="--hue: 245">Project One</div>
+          <div class="project-body">
+            <h3>Project One</h3>
+            <p>A short description of the project: what it does, the problem it solves, and your role.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live site →</a>
+              <a href="#" target="_blank" rel="noopener">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb" style="--hue: 170">Project Two</div>
+          <div class="project-body">
+            <h3>Project Two</h3>
+            <p>A short description of the project: what it does, the problem it solves, and your role.</p>
+            <ul class="tags"><li>React</li><li>API</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live site →</a>
+              <a href="#" target="_blank" rel="noopener">Code →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb" style="--hue: 20">Project Three</div>
+          <div class="project-body">
+            <h3>Project Three</h3>
+            <p>A short description of the project: what it does, the problem it solves, and your role.</p>
+            <ul class="tags"><li>Design</li><li>Figma</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Live site →</a>
+              <a href="#" target="_blank" rel="noopener">Case study →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container reveal" id="skills">
+      <h2 class="section-title"><span>03.</span> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools</h3>
+          <ul><li>Git &amp; GitHub</li><li>VS Code</li><li>Figma</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Other</h3>
+          <ul><li>Responsive design</li><li>Accessibility</li><li>Teamwork</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container reveal contact" id="contact">
+      <h2 class="section-title"><span>04.</span> Contact</h2>
+      <p class="contact-text">
+        I'm open to new opportunities and collaborations. Whether you have a question or just want
+        to say hi, my inbox is always open.
+      </p>
+      <a href="mailto:you@example.com" class="btn btn-primary">Say hello</a>
+      <ul class="socials">
+        <li><a href="https://github.com/malaaknote4-bot" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
