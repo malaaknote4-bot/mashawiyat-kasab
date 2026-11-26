@@ -658,3 +658,22 @@ body { transition: background-color .3s, color .3s; }
   .hero::after { display: none; }
   .nav-links li:has(.btn) { display: none; }
 }
+
+/* Phone: show the whole plate, larger, only the very edges soften */
+@media (max-width: 640px) {
+  .hero-inner { grid-template-columns: 1fr 1.3fr; gap: 6px; }
+  .hero-dish { width: 112%; margin-inline-end: -12%; }
+  .dish-frame img {
+    aspect-ratio: 885 / 535;
+    -webkit-mask-image: radial-gradient(ellipse 72% 74% at 50% 50%, #000 78%, transparent 100%);
+            mask-image: radial-gradient(ellipse 72% 74% at 50% 50%, #000 78%, transparent 100%);
+  }
+  .hero h1 { font-size: clamp(1.45rem, 6.6vw, 1.9rem); }
+  .lead { font-size: .88rem; }
+}
+@media (max-width: 640px) {
+  .dish-frame img {
+    -webkit-mask-image: radial-gradient(farthest-side at 50% 50%, #000 74%, transparent 100%);
+            mask-image: radial-gradient(farthest-side at 50% 50%, #000 74%, transparent 100%);
+  }
+}
