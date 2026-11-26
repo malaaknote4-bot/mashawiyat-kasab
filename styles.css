@@ -708,3 +708,5 @@ body { transition: background-color .3s, color .3s; }
   .hero .gold-text { filter: none; }
   .lead-poem { font-size: 1.02rem; line-height: 1.95; }
 }
+.cart-pay { flex-direction: column; gap: 8px; }
+.cart-pay label { font-family: var(--font-body); }

@@ -121,6 +121,7 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
     lines.push('');
     if (name) lines.push('الاسم: ' + name);
     lines.push('طريقة الاستلام: ' + mode);
+    lines.push('طريقة الدفع: ' + (f.get('pay') || 'كاش عند الاستلام'));
     if (mode === 'توصيل' && address) lines.push('العنوان: ' + address);
     if (notes) lines.push('ملاحظات: ' + notes);
     return lines.join('\n');
