@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>مطعم بيت الأصالة</title>
+  <title>مشويات كسب</title>
   <meta name="claude:viewport-fit-sides" content="cover">
-  <meta name="description" content="مطعم بيت الأصالة: أطباق عربية أصيلة بلمسة عصرية. اطلب الآن أو تصفح قائمة الطعام.">
+  <meta name="description" content="مشويات كسب: مشاوي تقليدية على الفحم، كباب وأوصال لحم وأطباق شعبية.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
   <header class="site-header">
     <nav class="nav wrap" aria-label="القائمة الرئيسية">
       <a href="#top" class="logo">
-        <span class="logo-mark" aria-hidden="true">ب</span>
-        <span>بيت الأصالة</span>
+        <span class="logo-mark" aria-hidden="true">ك</span>
+        <span>مشويات كسب</span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="فتح القائمة">
         <span></span><span></span><span></span>
@@ -24,9 +24,8 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#top">الرئيسية</a></li>
         <li><a href="#menu">المنيو</a></li>
-        <li><a href="#about">من نحن</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
-        <li><a href="#order" class="btn btn-gold btn-sm">اطلب الآن</a></li>
+        <li><a href="#contact" class="btn btn-gold btn-sm">اطلب الآن</a></li>
       </ul>
     </nav>
   </header>
@@ -36,33 +35,32 @@
     <section class="hero" id="top">
       <div class="hero-inner wrap">
         <div class="hero-text">
-          <p class="eyebrow">مطبخ عربي أصيل</p>
-          <h1>طعم البيت<br><span class="gold-text">بلمسة عصرية</span></h1>
+          <p class="eyebrow">على الفحم</p>
+          <h1>مشويات كسب<br><span class="gold-text">طعم الفحم الأصيل</span></h1>
           <p class="lead">
-            أطباق تقليدية نحضّرها كل يوم من مكونات طازجة، بوصفات توارثناها جيلاً بعد جيل.
-            جرّب داوود باشا الشهير، واطلب لعائلتك من أي مكان.
+            مشاوي تقليدية نحضّرها كل يوم من لحم طازج، تُشوى على الفحم وتُقدّم مع الخبز
+            والطماطم والبصل المشوي.
           </p>
           <div class="hero-actions">
-            <a href="#order" class="btn btn-gold">اطلب الآن</a>
+            <a href="#contact" class="btn btn-gold">اطلب الآن</a>
             <a href="#menu" class="btn btn-outline">تصفح المنيو</a>
           </div>
           <ul class="hero-features">
-            <li><strong>طازج يومياً</strong><span>مكونات مختارة</span></li>
-            <li><strong>توصيل سريع</strong><span>لباب بيتك</span></li>
+            <li><strong>لحم طازج</strong><span>يومياً</span></li>
+            <li><strong>على الفحم</strong><span>عند الطلب</span></li>
             <li><strong>وصفات أصيلة</strong><span>طعم لا يُنسى</span></li>
           </ul>
         </div>
 
-        <div class="hero-dish">
-          <div class="dish-ring" aria-hidden="true"></div>
+        <figure class="hero-dish">
           <div class="dish-frame">
-            <img src="images/dawood-hero.jpg" alt="طبق داوود باشا: كرات لحم مع الفلفل الملون والطماطم" width="640" height="640">
+            <img src="images/kebab.jpg" alt="نفر كباب لحم مع الخبز والطماطم والبصل المشوي" width="885" height="535">
           </div>
-          <div class="price-pill">
-            <span>داوود باشا</span>
+          <figcaption class="price-pill">
+            <span>نفر كباب لحم</span>
             <span class="price">30 ريال</span>
-          </div>
-        </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -70,58 +68,40 @@
     <section class="section wrap" id="menu">
       <div class="section-head">
         <p class="eyebrow">قائمة الطعام</p>
-        <h2>أطباقنا المميزة</h2>
-        <p class="section-sub">أطباق لحم مطهوة على الطريقة التقليدية، تُقدّم ساخنة في أطباق الفخار.</p>
+        <h2>المنيو</h2>
       </div>
 
+      <h3 class="cat-title"><span>المشاوي</span></h3>
+      <div class="menu-grid menu-grid-2">
+        <article class="dish-card">
+          <img src="images/kebab.jpg" alt="نفر كباب لحم" width="885" height="535" loading="lazy">
+          <div class="dish-label"><h4>نفر كباب لحم</h4><span class="price">30 ريال</span></div>
+          <p>أربعة أسياخ كباب لحم على الفحم، مع الخبز والطماطم والبصل المشوي والسلطة.</p>
+        </article>
+        <article class="dish-card">
+          <img src="images/awsal.jpg" alt="نفر أوصال لحم" width="945" height="555" loading="lazy">
+          <div class="dish-label"><h4>نفر أوصال لحم</h4><span class="price">32 ريال</span></div>
+          <p>قطع لحم متبّلة مشوية على الفحم، مع الخبز والطماطم والبصل المشوي والسلطة.</p>
+        </article>
+      </div>
+
+      <h3 class="cat-title"><span>الأطباق</span></h3>
       <div class="menu-grid">
         <article class="dish-card">
           <img src="images/dawood.jpg" alt="طبق داوود باشا" width="560" height="540" loading="lazy">
-          <div class="dish-label"><h3>داوود باشا</h3><span class="price">30 ريال</span></div>
+          <div class="dish-label"><h4>داوود باشا</h4><span class="price">30 ريال</span></div>
           <p>كرات لحم متبّلة مع الفلفل الملوّن والبصل والطماطم.</p>
         </article>
         <article class="dish-card">
           <img src="images/hamees.jpg" alt="طبق حميس لحم" width="545" height="500" loading="lazy">
-          <div class="dish-label"><h3>حميس لحم</h3><span class="price">30 ريال</span></div>
+          <div class="dish-label"><h4>حميس لحم</h4><span class="price">30 ريال</span></div>
           <p>قطع لحم محمّرة مع البصل والفلفل والطماطم الطازجة.</p>
         </article>
         <article class="dish-card">
           <img src="images/kofta.jpg" alt="طبق كفتة لحم" width="520" height="500" loading="lazy">
-          <div class="dish-label"><h3>كفتة لحم</h3><span class="price">30 ريال</span></div>
-          <p>كفتة لحم بالبهارات العربية، مزيّنة بالطماطم والفلفل الحار.</p>
+          <div class="dish-label"><h4>كفتة لحم</h4><span class="price">30 ريال</span></div>
+          <p>كفتة لحم بالبهارات، مزيّنة بالطماطم والفلفل الحار.</p>
         </article>
-      </div>
-    </section>
-
-    <!-- اطلب عبر التطبيقات -->
-    <section class="order-band" id="order">
-      <div class="wrap order-inner">
-        <div>
-          <h2>اطلب عبر تطبيقات التوصيل</h2>
-          <p>أطباقنا متوفرة على تطبيقاتك المفضلة، أو اتصل بنا مباشرة.</p>
-        </div>
-        <ul class="apps">
-          <li><a href="#">هنقرستيشن</a></li>
-          <li><a href="#">جاهز</a></li>
-          <li><a href="#">مرسول</a></li>
-          <li><a href="#">كيتا</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- من نحن -->
-    <section class="section wrap about" id="about">
-      <div class="about-img">
-        <img src="images/hamees.jpg" alt="طبق حميس لحم من مطبخنا" width="545" height="500" loading="lazy">
-      </div>
-      <div class="about-text">
-        <p class="eyebrow">من نحن</p>
-        <h2>حكاية بدأت من مطبخ البيت</h2>
-        <p>
-          في بيت الأصالة نؤمن أن الأكل الطيب يجمع الناس. بدأنا بوصفات العائلة، واليوم نقدّمها لكم
-          بنفس الحب ونفس الطعم، مع لمسة عصرية في التقديم.
-        </p>
-        <p>نختار اللحم الطازج يومياً، ونطبخ كل طبق عند الطلب ليصلكم ساخناً كما لو كان من بيتكم.</p>
       </div>
     </section>
 
@@ -149,7 +129,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> مطعم بيت الأصالة. جميع الحقوق محفوظة.</p>
+    <p>© <span id="year"></span> مشويات كسب. جميع الحقوق محفوظة.</p>
   </footer>
 
   <script src="script.js"></script>
