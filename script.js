@@ -55,11 +55,10 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
     b.innerHTML = plusIco;
     b.setAttribute('aria-label', 'أضف ' + name + ' إلى السلة');
     b.title = 'أضف إلى السلة';
+    b.dataset.name = name;
     b.addEventListener('click', () => {
       add(name, price);
-      b.classList.add('added');
-      clearTimeout(b._t);
-      b._t = setTimeout(() => b.classList.remove('added'), 1100);
+
     });
     return b;
   };
@@ -140,6 +139,11 @@ document.querySelector('.theme-toggle').addEventListener('click', () => {
   }
 
   function render() {
+    document.querySelectorAll('.add-btn').forEach((btn) => {
+      const inCart = cart.find((i) => i.name === btn.dataset.name);
+      btn.classList.toggle('added', !!inCart);
+      btn.title = inCart ? 'في السلة (' + inCart.qty + ') · اضغط لإضافة واحد آخر' : 'أضف إلى السلة';
+    });
     list.innerHTML = '';
     cart.forEach((item) => {
       const li = document.createElement('li');
