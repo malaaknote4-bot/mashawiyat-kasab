@@ -211,7 +211,7 @@ p, figure { margin: 0; }
 .hero-features span { color: var(--muted); font-size: .92rem; }
 
 /* Dish panel: double gold frame like the printed menu */
-.hero-dish { position: relative; min-width: 0; padding-bottom: 30px; }
+.hero-dish { position: relative; min-width: 0; }
 .dish-frame {
   position: relative; border-radius: 26px; padding: 12px;
   border: 1px solid var(--gold-2);
