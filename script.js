@@ -14,3 +14,17 @@ links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-label', 'فتح القائمة');
 }));
+
+// الوضع الفاتح والداكن (يتذكر اختيارك، وإلا يتبع إعداد الجهاز)
+const root = document.documentElement;
+try {
+  const saved = localStorage.getItem('theme');
+  if (saved) root.setAttribute('data-theme', saved);
+} catch (e) {}
+document.querySelector('.theme-toggle').addEventListener('click', () => {
+  const current = root.getAttribute('data-theme') ||
+    (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  const next = current === 'light' ? 'dark' : 'light';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('theme', next); } catch (e) {}
+});
